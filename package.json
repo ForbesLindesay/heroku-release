@@ -12,6 +12,7 @@
   ],
   "dependencies": {
     "babel-runtime": "^6.3.19",
+    "barrage": "^1.1.0",
     "heroku-client": "^2.4.1",
     "http-basic": "^2.5.1",
     "promise": "^7.1.1",
