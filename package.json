@@ -4,6 +4,9 @@
   "main": "lib/index.js",
   "description": "Release node.js apps to heroku without using Git (so that .gitignored assets are included)",
   "keywords": [],
+  "bin": {
+    "heroku-release": "./lib/cli.js"
+  },
   "files": [
     "lib/"
   ],
