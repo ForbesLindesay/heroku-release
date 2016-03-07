@@ -23,4 +23,4 @@ const dir = resolve(arg('--dir') || process.cwd());
 release(name, dir, {
   auth,
   version,
-});
+}).done();
