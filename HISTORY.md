@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.0.4: 2016-03-07
+
+- Make CLI report errors
+
 ## v0.0.3: 2016-03-06
 
 - Add missing barrage dependency
