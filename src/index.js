@@ -2,7 +2,7 @@ import Promise from 'promise';
 import request from 'then-request';
 import requestStream from 'http-basic';
 import {pack} from 'tar-pack';
-import barrage from 'barrage';
+import {PassThrough} from 'barrage';
 import Heroku from 'heroku-client';
 
 function addErrorContext(err, message) {
@@ -28,7 +28,7 @@ function publish(appName, folder, {auth, version, silent} = {}) {
     throw new TypeError('The "version" option must be a string');
   }
   const heroku = new Heroku({token: auth});
-  const tarballPromise = barrage(pack(folder, {ignoreFiles: []})).buffer('buffer');
+  const tarballPromise = pack(folder, {ignoreFiles: []}).pipe(new PassThrough()).buffer('buffer');
   const sourcesPromise = heroku.post('/sources').then(
     ({source_blob: {get_url: getUrl, put_url: putUrl}}) => ({getUrl, putUrl}),
   );
