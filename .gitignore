@@ -23,4 +23,6 @@ node_modules
 /lib
 
 # Config files
-environment.toml
+.env
+
+/test/fixture/token.txt
