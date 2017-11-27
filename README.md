@@ -1,7 +1,5 @@
 # heroku-release
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/heroku-release.svg)](https://greenkeeper.io/)
-
 Release apps to heroku without using Git (so that .gitignored assets are included)
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/heroku-release/master.svg)](https://travis-ci.org/ForbesLindesay/heroku-release)
