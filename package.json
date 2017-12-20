@@ -14,7 +14,7 @@
     "babel-runtime": "^6.3.19",
     "barrage": "^2.0.4",
     "dotenv": "^4.0.0",
-    "heroku-client": "^3.0.2",
+    "heroku-client": "^3.0.4",
     "http-basic": "^5.0.3",
     "promise": "^8.0.1",
     "tar-pack": "^3.4.0",
