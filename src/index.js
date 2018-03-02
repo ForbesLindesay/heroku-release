@@ -69,7 +69,12 @@ function publish(appName, folder, {auth, version, silent} = {}) {
       });
     }).then(() => {
       return heroku.get(`/apps/${appName}/builds/${result.id}`);
-    }).then(info => {
+    }).then(function pollStatus(info) {
+      if (info.status === 'pending') {
+        return heroku.get(`/apps/${appName}/builds/${result.id}`).then(pollStatus, err => {
+          throw addErrorContext(err, 'Could not get the publish status');
+        });
+      }
       if (info.status !== 'succeeded') {
         const err = new Error('Status was "' + info.status + '", expected "succeeded"');
         err.info = info;
