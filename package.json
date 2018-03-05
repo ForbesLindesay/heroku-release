@@ -15,7 +15,7 @@
     "barrage": "^2.0.4",
     "dotenv": "^5.0.0",
     "heroku-client": "^3.0.2",
-    "http-basic": "^6.0.0",
+    "http-basic": "^7.0.0",
     "promise": "^8.0.1",
     "tar-pack": "^3.4.0",
     "then-request": "^5.0.0",
