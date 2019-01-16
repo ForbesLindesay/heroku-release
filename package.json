@@ -24,7 +24,7 @@
   "devDependencies": {
     "babel-cli": "^6.4.0",
     "babel-preset-forbeslindesay": "^2.0.1",
-    "testit": "^2.0.2"
+    "testit": "^3.1.0"
   },
   "scripts": {
     "prepublish": "npm run build",
